@@ -8,7 +8,7 @@ switch (command) {
     viewFile.fn(input[1], input[2]);
     break;
   case "organize":
-    organizeFile.fn();
+    organizeFile.fn(input[1]);
     break;
   case "help":
     helpFile.fn();
