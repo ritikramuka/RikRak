@@ -35,10 +35,6 @@ function printFlat(dirName) {
   }
 }
 
-function FileName(dirName) {
-  return dirName.replace(/^.*[\\\/]/, "");
-}
-
 //ssf -> space so far
 function printTree(dirName, ssf) {
   if (checkFileOrFolder(dirName)) {
@@ -48,7 +44,7 @@ function printTree(dirName, ssf) {
       printTree(ChildsPath(dirName, childrens[i]), ssf + "\t");
     }
   } else {
-    console.log(ssf + FileName(dirName));
+    console.log(ssf + path.basename(dirName));
   }
 }
 
