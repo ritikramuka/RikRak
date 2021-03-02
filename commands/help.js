@@ -5,11 +5,11 @@ function help() {
       `List of all the commands:` +
         chalk.keyword("orange")(
           `
-    node rikrak.js view <dir-name> flat
-    node rikrak.js view <dir-name> tree
-    node rikrak.js organize <dir-name>
-    node rikrak.js organize 
-    node rikrak.js help
+    rikrak view <dir-name> flat
+    rikrak view <dir-name> tree
+    rikrak organize <dir-name>
+    rikrak organize 
+    rikrak help
   `
         )
     )
