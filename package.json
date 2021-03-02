@@ -1,0 +1,27 @@
+{
+  "name": "rikrak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rikrak.js",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritikramuka/RikRak.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritikramuka/RikRak/issues"
+  },
+  "homepage": "https://github.com/ritikramuka/RikRak#readme",
+  "bin": {
+    "rikrak": "./rikrak.js"
+  }
+}
