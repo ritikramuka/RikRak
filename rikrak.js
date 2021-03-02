@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 let input = process.argv.slice(2);
 let command = input[0];
 let helpFile = require("./commands/help");
