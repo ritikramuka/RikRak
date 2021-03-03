@@ -1,6 +1,7 @@
 let util = require("./util");
 let fs = require("fs");
 let path = require("path");
+let IntialStructure = require("./IntialStructure");
 
 function checkFileOrFolder(path) {
   return fs.lstatSync(path).isDirectory();
@@ -15,6 +16,9 @@ function AllChilds(dirName) {
 }
 
 function organize(dirName) {
+  if(!fs.existsSync(path.join(dirName, 'IntialStructure'))) {
+    IntialStructure.fn(dirName);
+  }
   let organizeDir = path.join(dirName, "organize");
   if (!fs.existsSync(organizeDir)) {
     fs.mkdirSync(organizeDir);
