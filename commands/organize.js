@@ -24,6 +24,7 @@ function organize(dirName) {
     fs.mkdirSync(organizeDir);
   }
   organizeFile(dirName, organizeDir);
+  deleteFile(dirName);
 }
 
 function organizeFile(src, desti) {
@@ -55,6 +56,15 @@ function sendFile(src, desti, DestiFolderName) {
   }
   let pathOfDestiFilePath = path.join(folderToMake, path.basename(src));
   fs.copyFileSync(src, pathOfDestiFilePath);
+}
+
+function deleteFile(dirName) {
+  let children = AllChilds(dirName);
+  for(let i = 0; i < children.length; i++) {
+    if(children[i] != "organize" && children[i] != "IntialStructure.json") {
+      fs.rmdirSync(path.join(dirName, children[i]), { recursive: true });
+    }
+  }
 }
 
 module.exports = {

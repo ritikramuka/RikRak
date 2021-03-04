@@ -7,7 +7,10 @@ function disorganize(dirName) {
     if (fs.existsSync(path.join(dirName, 'IntialStructure.json'))) {
         let structure = JSON.parse(fs.readFileSync(path.join(dirName, 'IntialStructure.json')));
         let organizeDir = path.join(dirName, "organize");
-        disorganizeFile(structure, organizeDir, dirName);
+        for (const child in structure.children) {
+            disorganizeFile(structure.children[child], organizeDir, dirName);
+        }
+        deleteFile(dirName);
     }
 }
 
@@ -37,6 +40,15 @@ function pathInOrgDir(name, dirName) {
         for (let j = 0; j < child.length; j++) {
             if (child[j] == name)
                 return path.join(childsPath, child[j]);
+        }
+    }
+}
+
+function deleteFile(dirName) {
+    let children = AllChilds(dirName);
+    for (let i = 0; i < children.length; i++) {
+        if (children[i] == "organize" || children[i] == "IntialStructure.json") {
+            fs.rmdirSync(path.join(dirName, children[i]), { recursive: true });
         }
     }
 }
