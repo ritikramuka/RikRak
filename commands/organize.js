@@ -16,7 +16,7 @@ function AllChilds(dirName) {
 }
 
 function organize(dirName) {
-  if(!fs.existsSync(path.join(dirName, 'IntialStructure'))) {
+  if (!fs.existsSync(path.join(dirName, 'IntialStructure'))) {
     IntialStructure.fn(dirName);
   }
   let organizeDir = path.join(dirName, "organize");
@@ -31,11 +31,13 @@ function organizeFile(src, desti) {
   if (checkFileOrFolder(src)) {
     let childrens = AllChilds(src);
     for (let i = 0; i < childrens.length; i++) {
-        organizeFile(ChildsPath(src, childrens[i]), desti);
+      organizeFile(ChildsPath(src, childrens[i]), desti);
     }
   } else {
-    let DestiFolderName = checkExtension(src);
-    sendFile(src, desti, DestiFolderName);
+    if (path.basename(src) != "IntialStructure.json") {
+      let DestiFolderName = checkExtension(src);
+      sendFile(src, desti, DestiFolderName);
+    }
   }
 }
 
@@ -60,8 +62,8 @@ function sendFile(src, desti, DestiFolderName) {
 
 function deleteFile(dirName) {
   let children = AllChilds(dirName);
-  for(let i = 0; i < children.length; i++) {
-    if(children[i] != "organize" && children[i] != "IntialStructure.json") {
+  for (let i = 0; i < children.length; i++) {
+    if (children[i] != "organize" && children[i] != "IntialStructure.json") {
       fs.rmdirSync(path.join(dirName, children[i]), { recursive: true });
     }
   }
