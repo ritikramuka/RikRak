@@ -2,11 +2,11 @@
 
 let input = process.argv.slice(2);
 let command = input[0];
+let chalk = require('chalk');
 let helpFile = require("./commands/help");
 let viewFile = require("./commands/view");
 let organizeFile = require("./commands/organize");
 let disorganizeFile = require("./commands/disorganize");
-let chalk = require("chalk");
 switch (command) {
   case "view":
     viewFile.fn(input[1], input[2]);
