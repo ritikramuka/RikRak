@@ -1,9 +1,9 @@
 # **RikRak: a command to organize file content with additional features like view file content.**
 
 ## The features includes:
-###### rikrak view <dir-name> flat
-###### rikrak view <dir-name> tree
-###### rikrak organize <dir-name>
+###### rikrak view ``` <dir-name> ``` flat
+###### rikrak view ``` <dir-name> ``` tree
+###### rikrak organize ``` <dir-name> ```
 ###### rikrak organize 
 
 ##### To Revert Organize Command
