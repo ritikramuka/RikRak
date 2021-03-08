@@ -1,4 +1,3 @@
-const { green, yellowBright } = require("chalk");
 let chalk = require("chalk");
 function help() {
   console.log(
