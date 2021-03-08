@@ -7,7 +7,7 @@
 ###### rikrak organize 
 
 ##### To Revert Organize Command
-###### rikrak disorganize <dir-name>
+###### rikrak disorganize ``` <dir-name> ```
 ###### rikrak disorganize 
     
 ###### rikrak help
