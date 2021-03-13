@@ -15,9 +15,8 @@
 ## How to execute the code
 ###### Steps 1: Folk the project
 ###### Steps 2: Open Terminal in VSCODE
-###### Steps 3: Run ``` npm i ```
-###### Steps 4: Run ``` npm link ```
-###### Steps 5: Execute: ``` rikrak help ``` for commands
+###### Steps 3: Run ``` npm link ```
+###### Steps 4: Execute: ``` rikrak help ``` for commands
 
 ## Explanation
 ###### RikRak is user-defined command created using Javascript and Node.js. The command is very handy to organize files.
